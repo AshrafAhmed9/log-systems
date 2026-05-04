@@ -7,16 +7,17 @@ A production-style log ingestion and analytics platform built with FastAPI, Redi
 ```
 Producers → FastAPI → Redis Streams → Worker → PostgreSQL → Analytics API
 ```
+
 ## Screenshots
 
 ### API Documentation
 ![API Docs](screenshots/api_docs.png)
 
+### Real-Time Alerts Firing
+![Alerts](screenshots/alerts.png)
+
 ### Load Test Results
 ![Load Test](screenshots/load_test.png)
-
-### Real-Time Alerts
-![Alerts](screenshots/alerts.png)
 
 ### Analytics Endpoints
 ![Analytics](screenshots/analytics.png)
@@ -24,6 +25,15 @@ Producers → FastAPI → Redis Streams → Worker → PostgreSQL → Analytics 
 ### Internal Metrics
 ![Metrics](screenshots/metrics.png)
 
+## Performance
+
+| Metric | Result |
+|---|---|
+| Ingestion throughput | 343 logs/sec |
+| Latency P50 | 10ms |
+| Latency P99 | 268ms |
+| Total logs processed | 10,000+ |
+| Alert detection latency | <5 seconds |
 
 ## Tech Stack
 
@@ -35,16 +45,6 @@ Producers → FastAPI → Redis Streams → Worker → PostgreSQL → Analytics 
 | Worker | Python (sync) |
 | Load Simulator | Python + httpx async |
 | Infrastructure | Docker Compose |
-
-## Performance
-
-| Metric | Result |
-|---|---|
-| Ingestion throughput | 343 logs/sec |
-| Latency P50 | 10ms |
-| Latency P99 | 268ms |
-| Total logs processed | 10,000+ |
-| Alert detection latency | <5 seconds |
 
 ## Quick Start
 
