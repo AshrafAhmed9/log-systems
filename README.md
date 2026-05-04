@@ -7,6 +7,23 @@ A production-style log ingestion and analytics platform built with FastAPI, Redi
 ```
 Producers → FastAPI → Redis Streams → Worker → PostgreSQL → Analytics API
 ```
+## Screenshots
+
+### API Documentation
+![API Docs](screenshots/api_docs.png)
+
+### Load Test Results
+![Load Test](screenshots/load_test.png)
+
+### Real-Time Alerts
+![Alerts](screenshots/alerts.png)
+
+### Analytics Endpoints
+![Analytics](screenshots/analytics.png)
+
+### Internal Metrics
+![Metrics](screenshots/metrics.png)
+
 
 ## Tech Stack
 
